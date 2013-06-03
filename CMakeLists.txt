@@ -1,5 +1,6 @@
 cmake_minimum_required(VERSION 2.8)
-project(jdbcdriver Java)
+#project(jdbcdriver Java)
+project(jdbcdriver)
 
 include(version.cmake)
 
