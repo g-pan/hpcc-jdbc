@@ -40,14 +40,14 @@ IF ("${COMMONSETUP_DONE}" STREQUAL "")
 
   cmake_policy ( SET CMP0011 NEW )
 
-  option(USE_NATIVE_LIBRARIES "Search standard OS locations for thirdparty libraries" ON)
-  option(USE_GIT_DESCRIBE "Use git describe to generate build tag" ON)
+  #option(USE_NATIVE_LIBRARIES "Search standard OS locations for thirdparty libraries" ON)
+  #option(USE_GIT_DESCRIBE "Use git describe to generate build tag" ON)
   option(CHECK_GIT_TAG "Require git tag to match the generated build tag" OFF)
   option(MAKE_DOCS "Create documentation at build time." OFF)
   option(MAKE_DOCS_ONLY "Create a base build with only docs." OFF)
-  option(DOCS_DRUPAL "Create Drupal HTML Docs" OFF)
-  option(DOCS_EPUB "Create EPUB Docs" OFF)
-  option(DOCS_MOBI "Create Mobi Docs" OFF)
+  #option(DOCS_DRUPAL "Create Drupal HTML Docs" OFF)
+  #option(DOCS_EPUB "Create EPUB Docs" OFF)
+  #option(DOCS_MOBI "Create Mobi Docs" OFF)
 
   if ( MAKE_DOCS_ONLY )
     set( MAKE_DOCS ON )
@@ -115,8 +115,8 @@ IF ("${COMMONSETUP_DONE}" STREQUAL "")
     endif()
   endmacro(HPCC_ADD_SUBDIRECTORY)
 
-  set ( SCM_GENERATED_DIR ${CMAKE_BINARY_DIR}/generated )
-  include_directories (${SCM_GENERATED_DIR})
+  #set ( SCM_GENERATED_DIR ${CMAKE_BINARY_DIR}/generated )
+  #include_directories (${SCM_GENERATED_DIR})
 
   ##################################################################
 
@@ -158,18 +158,18 @@ IF ("${COMMONSETUP_DONE}" STREQUAL "")
   ###
   ## The following sets the install directories and names.
   ###
-  set ( OSSDIR "${DIR_NAME}" )
-  set ( CPACK_INSTALL_PREFIX "${PREFIX}" )
-  set ( CPACK_PACKAGING_INSTALL_PREFIX "${PREFIX}" )
-  set ( CMAKE_INSTALL_PREFIX "${PREFIX}" )
-  SET(CMAKE_SKIP_BUILD_RPATH  FALSE)
-  SET(CMAKE_BUILD_WITH_INSTALL_RPATH FALSE) 
-  SET(CMAKE_INSTALL_RPATH "${CMAKE_INSTALL_PREFIX}/${OSSDIR}/lib")
-  SET(CMAKE_INSTALL_RPATH_USE_LINK_PATH TRUE)
-  if (APPLE)
-    set(CMAKE_INSTALL_RPATH "@loader_path/../lib")
-    set(CMAKE_INSTALL_NAME_DIR "@loader_path/../lib") 
-  endif()
+ # set ( OSSDIR "${DIR_NAME}" )
+ # set ( CPACK_INSTALL_PREFIX "${PREFIX}" )
+ # set ( CPACK_PACKAGING_INSTALL_PREFIX "${PREFIX}" )
+ # set ( CMAKE_INSTALL_PREFIX "${PREFIX}" )
+ # SET(CMAKE_SKIP_BUILD_RPATH  FALSE)
+ # SET(CMAKE_BUILD_WITH_INSTALL_RPATH FALSE) 
+ # SET(CMAKE_INSTALL_RPATH "${CMAKE_INSTALL_PREFIX}/${OSSDIR}/lib")
+ # SET(CMAKE_INSTALL_RPATH_USE_LINK_PATH TRUE)
+ # if (APPLE)
+ #   set(CMAKE_INSTALL_RPATH "@loader_path/../lib")
+ #   set(CMAKE_INSTALL_NAME_DIR "@loader_path/../lib") 
+ # endif()
 
   MACRO (FETCH_GIT_TAG workdir edition result)
       execute_process(COMMAND "${GIT_COMMAND}" describe --tags --dirty --abbrev=6 --match ${edition}*
