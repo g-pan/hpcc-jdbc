@@ -12,7 +12,6 @@ SET ( HPCC_JDBC_PAC_PATH org/hpccsystems/jdbcdriver)
 SET ( HPCC_JDBC_JAVA_SRC_PATH main/java)
 SET ( HPCC_JDBC_REL_PATH src/${HPCC_JDBC_JAVA_SRC_PATH}/${HPCC_JDBC_PAC_PATH})
 SET ( CMAKE_MODULE_PATH "${CMAKE_CURRENT_SOURCE_DIR}/cmake_modules")
- INCLUDE(${CMAKE_MODULE_PATH}/optionDefaults.cmake)
  INCLUDE(${CMAKE_MODULE_PATH}/jdbcdocscommonSetup.cmake)
 
 IF ( NOT MAKE_DOCS_ONLY )
