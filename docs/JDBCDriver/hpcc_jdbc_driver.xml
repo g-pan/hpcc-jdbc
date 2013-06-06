@@ -143,13 +143,13 @@
 
     <para><informaltable colsep="1" frame="all" rowsep="1">
         <tgroup cols="4">
-          <colspec colwidth="131.40pt" />
+          <colspec colwidth="135" />
 
-          <colspec colwidth="315pt" />
+          <colspec colwidth="315" />
 
-          <colspec colwidth="95.5pt" />
+          <colspec colwidth="95" />
 
-          <colspec colwidth="40pt" />
+          <colspec colwidth="40" />
 
           <thead>
             <row>
