@@ -143,14 +143,7 @@
 
     <para><informaltable colsep="1" frame="all" rowsep="1">
         <tgroup cols="4">
-          <colspec colwidth="135" />
-
-          <colspec colwidth="315" />
-
-          <colspec colwidth="95" />
-
-          <colspec colwidth="40" />
-
+         
           <thead>
             <row>
               <entry>Property</entry>
