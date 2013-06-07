@@ -145,9 +145,9 @@
         <tgroup cols="4">
           <colspec colwidth="120pt" />
 
-          <colspec colwidth="225pt" />
+          <colspec colwidth="3*" />
 
-          <colspec colwidth="65pt" />
+          <colspec colwidth="1*" />
 
           <colspec colwidth="35pt" />
 
